@@ -24,9 +24,9 @@ export const Navigation = styled.nav`
        align-items: center; 
 
        > span {
-        color: var(--color-quaternary);
-        margin-left: 10px;
-        font-size: 29px;
+            color: var(--color-quaternary);
+            margin-left: 10px;
+            font-size: 29px;
         }
     }   
 
@@ -40,6 +40,8 @@ export const Navigation = styled.nav`
     }
 
     @media (min-width: 1024px){
+        justify-content: flex-end;
+        
         > h1 {
             display: none;
         }
@@ -56,12 +58,54 @@ export const DropboxLogo = styled(FaDropbox)`
 
 export const Form = styled.form`
     display: flex;
-    height: 100px;
+    height: 100%;
 
     flex-direction: column;
     justify-content: center;
 
     padding: 0 32px;
     max-width: 480px;
-    margin: 0 auto;    
+    margin: 0 auto;  
+
+    > .title {
+        font-size: 25px;
+        font-weight: 500;
+    } 
+
+    > .subtitle {
+        font-size: 12px;
+        margin-top: 3px;
+    } 
+
+    > input {
+        background: var(--color-tertiary);
+        border: 1px solid var(--color-border);
+        padding: 13px 18px;
+        font-size: 14px;
+
+        margin-top: 18px;
+    }
+
+    > button {
+        margin-top:18px;
+
+        padding: 13px 18px;
+        font-size: 16px;
+
+        background-color: var(--color-blue);
+        color: var(--color-tertiary);
+        border: none;
+
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.87;
+        }
+    }
+
+    > .terms {
+        font-size: 12px;
+        opacity: 0.6;
+        margin-top: 4px;
+    }
 `;
